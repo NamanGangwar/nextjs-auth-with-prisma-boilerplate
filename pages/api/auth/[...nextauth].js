@@ -47,6 +47,9 @@ const options = {
 	session: {
 		jwt: true,
 	},
+	jwt: {
+		signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
+	},
 	adapter: Adapters.Prisma.Adapter({ prisma }),
 };
 
