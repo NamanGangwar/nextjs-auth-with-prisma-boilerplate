@@ -1,19 +1,7 @@
 import Layout from "../components/Layout";
-import { useSession } from "next-auth/client";
 import WithAuth from "../components/WithAuth";
 
 const protectedcsr = () => {
-	const [session, loading] = useSession();
-
-	if (loading) return null;
-	if (!loading && !session) {
-		return (
-			<Layout title="Protected Page">
-				<p>Access Denied</p>
-			</Layout>
-		);
-	}
-
 	return (
 		<Layout title="Protected Page">
 			<div>
