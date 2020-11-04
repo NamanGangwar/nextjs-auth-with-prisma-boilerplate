@@ -5,7 +5,7 @@ const apiExample = () => {
 	const [data, setData] = useState(null);
 
 	useEffect(async () => {
-		const response = await fetch("http://localhost:3000/api/session", {
+		const response = await fetch("/api/session", {
 			method: "post",
 			credentials: "include",
 		});
